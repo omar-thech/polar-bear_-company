@@ -1,0 +1,17 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
+
+    // Here you can do what you need with the data (save to database, send email, etc.)
+    echo "<h1>Form Submitted</h1>";
+    echo "<p><strong>Name:</strong> $name</p>";
+    echo "<p><strong>Email:</strong> $email</p>";
+    echo "<p><strong>Phone:</strong> $phone</p>";
+    echo "<p><strong>Message:</strong> $message</p>";
+} else {
+    echo "<p>No data received.</p>";
+}
+?>
